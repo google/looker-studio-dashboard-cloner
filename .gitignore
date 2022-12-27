@@ -1,0 +1,8 @@
+__pycache__
+*.mypy*
+*.swp
+*.log
+.venv
+.DS_Store
+node_modules/
+.npmrc

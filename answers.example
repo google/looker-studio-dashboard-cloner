@@ -1,0 +1,10 @@
+{
+  "use_current_project": false,
+  "project_id": "my-project",
+  "dashboard_id": "7dc7e6db-0000-1234-5678-0609b2ab712c",
+  "dashboard_name": "test",
+  "dashboard_dataset": "test",
+  "dashboard_datasources": {
+    "campaign": "campaign"
+  }
+}
