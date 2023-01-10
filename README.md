@@ -16,7 +16,7 @@ Once installed globally (with `-g` option) it provides `lsd-cloner` CLI tool. Ru
 
 Run with pre-polulated answers:
 ```
-lsd-cloner --answer=answers.json
+lsd-cloner --answers=answers.json
 ```
 
 
