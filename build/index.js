@@ -177,14 +177,14 @@ async function get_gcp_project(answers) {
         {
             type: 'autocomplete',
             name: 'project_id',
-            message: 'Please enter a GCP project id:',
+            message: 'Please enter a GCP project id where your tables located:',
             suggestOnly: true,
             emptyText: 'No projects found',
             validate: input => !!input,
             source: (answersSoFar, input) => {
                 if (!input)
                     return rows;
-                return rows.filter((row, index) => row.name.includes(input) || row.value.includes(input));
+                return rows.filter(row => row.name.includes(input) || row.value.includes(input));
             },
         },
     ]);
@@ -198,6 +198,9 @@ async function get_gcp_project(answers) {
         console.log(chalk.red(`The GCP project ${response.project_id} does not exist or you don't have access to it`));
     }
     gcp_project_id = response.project_id;
+    if (answers) {
+        answers.project_id = gcp_project_id;
+    }
     return gcp_project_id.trim();
 }
 async function main() {
@@ -215,26 +218,6 @@ async function main() {
         fs.writeFileSync(output_file, JSON.stringify(answers, null, 2));
         console.log(chalk.gray(`Answers saved into ${output_file}`));
     }
-    // const r = await sdk.login({
-    //   client_id:
-    //     '162551664177-q37gflv5sm4cpej0b4jnemhuqnlefbpq.apps.googleusercontent.com',
-    //   client_secret: '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',
-    // });
-    // console.log(r.ok);
 }
-// import {LookerNodeSDK} from '@looker/sdk-node';
-// const sdk = LookerNodeSDK.init40();
-// async function fetchReports() {
-//   try {
-//     //const all = await sdk.ok(sdk.all_dashboards('id,title'));
-//     const results = await sdk.ok(sdk.search_dashboards({limit: 10}));
-//     for (const result of results) {
-//       console.log(`Report: ${result.title} (${result.id})`);
-//     }
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
-// fetchReports();
 main().catch(console.error);
 //# sourceMappingURL=index.js.map

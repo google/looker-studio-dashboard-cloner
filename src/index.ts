@@ -255,6 +255,9 @@ async function get_gcp_project(answers: Partial<any>) {
     );
   }
   gcp_project_id = response.project_id;
+  if (answers) {
+    answers.project_id = gcp_project_id;
+  }
   return gcp_project_id.trim();
 }
 
