@@ -1,6 +1,6 @@
 {
   "name": "lsd-cloner",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Looker Studio Dashboard Cloner",
   "type": "module",
   "bin": {
@@ -27,15 +27,15 @@
   "dependencies": {
     "chalk": "^5.2.0",
     "clui": "^0.3.6",
-    "inquirer": "^9.1.4",
-    "inquirer-autocomplete-prompt": "^3.0.0",
+    "inquirer": "=9.3.1",
+    "inquirer-autocomplete-prompt": "3.0.1",
     "minimist": "^1.2.7",
     "open": "^8.4.0"
   },
   "devDependencies": {
     "@types/clui": "^0.3.1",
-    "@types/inquirer": "^9.0.3",
-    "@types/inquirer-autocomplete-prompt": "^3.0.0",
+    "@types/inquirer": "^9.0.7",
+    "@types/inquirer-autocomplete-prompt": "^3.0.3",
     "@types/node": "^18.11.17",
     "gts": "^4.0.0",
     "ts-node": "^10.9.1",

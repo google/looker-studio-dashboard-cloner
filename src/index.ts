@@ -83,7 +83,7 @@ async function ask_for_dashboard_datasources(
     {
       type: 'confirm',
       name: 'dashboard_more_tables',
-      message: 'Do you want to enter another datasource:',
+      message: 'Do you want to enter another datasource (y/N):',
       default: false,
       when: answers => !!answers.dashboard_datasource,
     },

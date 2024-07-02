@@ -3,7 +3,7 @@
   "compilerOptions": {
     "allowUnreachableCode": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "module": "nodenext",
     "outDir": "build",
     "lib": ["es2021"]
